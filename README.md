@@ -12,7 +12,7 @@ You also need the repo tool for cloning Android source trees.
 ````
 mkdir ~/omni-twrp-tree
 cd ~/omni-twrp-tree
-repo init -u https://github.com/sultanqasim/twrp_recovery_manifest.git -b android-5.1
+repo init -u https://github.com/motoxplay/twrp_recovery_manifest.git -b android-5.1
 mkdir -p .repo/local_manifests
 ````
 
