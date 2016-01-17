@@ -15,13 +15,12 @@ cd ~/omni-twrp-tree
 repo init -u https://github.com/motoxplay/twrp_recovery_manifest.git -b android-5.1
 mkdir -p .repo/local_manifests
 ````
-
 Create a file .repo/local_manifests/motorola.xml and paste this in
 ````
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <project name="motoxplay/android_device_motorola_lux" path="device/motorola/lux" remote="github" revision="twrp" />
-    <project name="sultanqasim/android_kernel_motorola_msm8916" path="kernel/motorola/msm8916" remote="github" revision="squid_linux_mr1" />
+    <project name="sultanqasim/android_kernel_motorola_msm8916" path="kernel/motorola/msm8916" remote="github" revision="squid_marshmallow" />
     <project name="CyanogenMod/android_device_qcom_common" path="device/qcom/common" remote="github" revision="cm-12.1" />
 </manifest>
 ````
@@ -34,8 +33,7 @@ repo sync
 ##Building:
 ````
 source build/envsetup.sh
-lunch omni_lux-userdebug
+breakfast lux
 make clean
-make installclean
-make -j10 recoveryimage
+make -j5 recoveryimage
 ````
